@@ -18,11 +18,11 @@ class Item{
     class Bill{
        
         Item[] items;
-        int[] qualities;
+        int[] quantity;
         
-        Bill(Item[] items, int[] qualities){
+        Bill(Item[] items, int[] quantity){
           this.items=items;
-          this.qualities=qualities;
+          this.quantity=quantity;
         }
         
         double calculatetotal(){
@@ -31,7 +31,7 @@ class Item{
             
             for(int i=0; i< items.length; i++){
              
-                total+=items[i].unitedprice*qualities[i];
+                total+=items[i].unitedprice*quantity[i];
             
             }
             return total;
@@ -44,9 +44,9 @@ class Item{
             
             for(int i =0; i <items.length; i++){
                 
-            double price = items[i].unitedprice*qualities[i];
+            double price = items[i].unitedprice*quantity[i];
             
-            System.out.printf("%-10s %-5s %-5s%n", items[i].name,qualities[i],price);
+            System.out.printf("%-10s %-5s %-5s%n", items[i].name,quantity[i],price);
             }
         }
         }
@@ -83,11 +83,11 @@ public class Ecommercebillingengine {
          sc.nextLine();
          
          items[i] = new Item(i+ 1,name,price);
-         qualities[i]=qty;
+         quantity[i]=qty;
          
         }
         
-        Bill bill = new Bill(items,qualities);
+        Bill bill = new Bill(items,quantity);
         bill.printbill();
     }
 }
