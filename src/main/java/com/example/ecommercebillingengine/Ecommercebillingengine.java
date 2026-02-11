@@ -48,8 +48,6 @@ class Item{
             
             System.out.printf("%-10s %-5s %-5s%n", items[i].name,qualities[i],price);
             }
-//            System.out.println("------------");
-//            System.out.printf("%-10s %-5s %-5s%n", "Total","",calculatetotal());
         }
         }
 public class Ecommercebillingengine {
@@ -90,7 +88,6 @@ public class Ecommercebillingengine {
         }
         
         Bill bill = new Bill(items,qualities);
-//        System.out.println("***** BILL ******");
         bill.printbill();
     }
 }
